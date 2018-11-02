@@ -87,7 +87,7 @@ def main():
 	prob_x_c2 = constant_num * np.exp(matrix_mult2)
 	prob_c1 = class1.shape[0] / X_train.shape[0]
 	prob_c2 = class2.shape[0] / X_train.shape[0]
-	prob1 = (prob_x_c1 * prob_c1) / (prob_x_c1 * prob_c1 + prob_x_c2 * prob_c2 + 1e-10)
+	prob1 = (prob_x_c1 * prob_c1) / (prob_x_c1 * prob_c1 + prob_x_c2 * prob_c2 + 1e-500)
 	prob1[np.isnan(prob1)] = 0
 	prob1[prob1 > 0.5] = 0
 	prob1[prob1 != 0] = 1
