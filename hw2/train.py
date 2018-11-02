@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd 
 import sys
+import warnings
 #0.82020
 def Classify(train_x, label):
 	list1 = []
@@ -57,6 +58,7 @@ def FeatureScaling(minData, maxData, dataArray, train=False):
 
 def main():
 	#np.set_printoptions(threshold=np.inf)
+	warnings.filterwarnings("ignore")
 	if (len(sys.argv) < 5):
 		print("Please specify 1: the traning data file 2: the label file 3: the testing data file 4: the output file")
 		sys.exit(1)
