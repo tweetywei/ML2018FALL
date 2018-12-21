@@ -15,23 +15,6 @@ from keras.layers import LSTM
 from keras.layers.embeddings import Embedding
 from keras.models import load_model
 
- #-*- coding=utf-8 -*-
-import pandas as pd
-import sys
-import jieba
-import numpy as np
-import random
-from gensim.models import Word2Vec
-from keras.preprocessing.sequence import pad_sequences
-from keras.models import Model
-from keras.optimizers import Adam
-from keras.layers.normalization import BatchNormalization
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.layers import LSTM
-from keras.layers.embeddings import Embedding
-from keras.models import load_model
-
 def ReadFile(testx_filename, dic_file):
 	df = pd.read_csv(testx_filename,encoding='utf-8',  sep='\n')
 	df = df.values.flatten().tolist()
